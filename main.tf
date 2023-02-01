@@ -22,6 +22,9 @@ resource "azurerm_private_dns_a_record" "prdremarapp01" {
   resource_group_name = var.resource_group_name
   ttl                 = 3600
   records             = ["10.230.112.20"]
+  depends_on = [
+    azurerm_private_dns_zone.private_dns_zone
+  ]
 }
 resource "azurerm_private_dns_a_record" "stgapigw-vip" {
   name                = "stgapigw-vip"
@@ -29,6 +32,9 @@ resource "azurerm_private_dns_a_record" "stgapigw-vip" {
   resource_group_name = var.resource_group_name
   ttl                 = 36000
   records             = ["10.140.70.174"]
+  depends_on = [
+    azurerm_private_dns_zone.private_dns_zone
+  ]
 }
 resource "azurerm_private_dns_a_record" "tstremarapp01" {
   name                = "tstremarapp01"
@@ -36,6 +42,9 @@ resource "azurerm_private_dns_a_record" "tstremarapp01" {
   resource_group_name = var.resource_group_name
   ttl                 = 10800
   records             = ["10.255.51.21"]
+  depends_on = [
+    azurerm_private_dns_zone.private_dns_zone
+  ]
 }
 
 
