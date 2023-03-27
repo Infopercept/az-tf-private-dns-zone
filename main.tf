@@ -39,8 +39,8 @@ resource "azurerm_private_dns_a_record" "stgapigw-vip" {
 }*/
 
 resource "azurerm_private_dns_a_record" "stgapigw-vip" {
-    fqdn                = "prdremarapp01.dm.ae."
-    id                  = "/subscriptions/9c6305ab-4484-4e63-9189-3ec249d383ae/resourceGroups/dm-it-iot-dev-connectivity-rg/providers/Microsoft.Network/privateDnsZones/dm.ae/A/prdremarapp01"
+    #fqdn                = "prdremarapp01.dm.ae."
+    #id                  = "/subscriptions/9c6305ab-4484-4e63-9189-3ec249d383ae/resourceGroups/dm-it-iot-dev-connectivity-rg/providers/Microsoft.Network/privateDnsZones/dm.ae/A/prdremarapp01"
     name                = "prdremarapp01"
     records             = [
         "10.230.112.20",
@@ -65,8 +65,8 @@ resource "azurerm_private_dns_a_record" "stgapigw-vip" {
 }*/
 
 resource "azurerm_private_dns_a_record" "tstremarapp01" {
-    fqdn                = "stgapigw-vip.dm.ae."
-    id                  = "/subscriptions/9c6305ab-4484-4e63-9189-3ec249d383ae/resourceGroups/dm-it-iot-dev-connectivity-rg/providers/Microsoft.Network/privateDnsZones/dm.ae/A/stgapigw-vip"
+    #fqdn                = "stgapigw-vip.dm.ae."
+    #id                  = "/subscriptions/9c6305ab-4484-4e63-9189-3ec249d383ae/resourceGroups/dm-it-iot-dev-connectivity-rg/providers/Microsoft.Network/privateDnsZones/dm.ae/A/stgapigw-vip"
     name                = "stgapigw-vip"
     records             = [
         "10.140.70.174",
