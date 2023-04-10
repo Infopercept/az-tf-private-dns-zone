@@ -2,6 +2,10 @@ resource "azurerm_private_dns_zone" "private_dns_zone" {
   count               = length(var.private_dns_zone_names)
   name                = (var.private_dns_zone_names)[count.index]
   resource_group_name = var.resource_group_name
+    tags = {
+    Environment = "Dev"
+    Purpose     = "testing"
+  }
 }
 
 resource "azurerm_private_dns_zone_virtual_network_link" "private_dns_zone_virtual_network_link" {
