@@ -49,7 +49,7 @@ resource "azurerm_private_dns_a_record" "stgapigw-vip" {
     records             = [
         "10.230.112.20",
     ]
-    resource_group_name = local.resource_group_name
+    resource_group_name = var.resource_group_name
     tags                = {}
     ttl                 = 3600
     zone_name           = "dm.ae"
@@ -75,7 +75,7 @@ resource "azurerm_private_dns_a_record" "tstremarapp01" {
     records             = [
         "10.140.70.174",
     ]
-    resource_group_name = local.resource_group_name
+    resource_group_name = var.resource_group_name
     tags                = {}
     ttl                 = 36000
     zone_name           = "dm.ae"
