@@ -30,7 +30,7 @@ resource "azurerm_private_dns_a_record" "prdremarapp01" {
     azurerm_private_dns_zone.private_dns_zone
   ]
 }
-/*
+
 resource "azurerm_private_dns_a_record" "stgapigw-vip" {
   name                = "stgapigw-vip"
   zone_name           = "dm.ae"
@@ -40,8 +40,8 @@ resource "azurerm_private_dns_a_record" "stgapigw-vip" {
   depends_on = [
     azurerm_private_dns_zone.private_dns_zone
   ]
-}*/
-
+}
+/*
 resource "azurerm_private_dns_a_record" "stgapigw-vip" {
     #fqdn                = "prdremarapp01.dm.ae."
     #id                  = "/subscriptions/9c6305ab-4484-4e63-9189-3ec249d383ae/resourceGroups/dm-it-iot-dev-connectivity-rg/providers/Microsoft.Network/privateDnsZones/dm.ae/A/prdremarapp01"
@@ -55,9 +55,9 @@ resource "azurerm_private_dns_a_record" "stgapigw-vip" {
     zone_name           = "dm.ae"
 
     timeouts {}
-}
+}*/
 
-/*resource "azurerm_private_dns_a_record" "tstremarapp01" {
+resource "azurerm_private_dns_a_record" "tstremarapp01" {
   name                = "tstremarapp01"
   zone_name           = "dm.ae"
   resource_group_name = var.resource_group_name
@@ -66,9 +66,9 @@ resource "azurerm_private_dns_a_record" "stgapigw-vip" {
   depends_on = [
     azurerm_private_dns_zone.private_dns_zone
   ]
-}*/
+}
 
-resource "azurerm_private_dns_a_record" "tstremarapp01" {
+/*resource "azurerm_private_dns_a_record" "tstremarapp01" {
     #fqdn                = "stgapigw-vip.dm.ae."
     #id                  = "/subscriptions/9c6305ab-4484-4e63-9189-3ec249d383ae/resourceGroups/dm-it-iot-dev-connectivity-rg/providers/Microsoft.Network/privateDnsZones/dm.ae/A/stgapigw-vip"
     name                = "stgapigw-vip"
@@ -81,7 +81,7 @@ resource "azurerm_private_dns_a_record" "tstremarapp01" {
     zone_name           = "dm.ae"
 
     timeouts {}
-}
+}*/
 
 
 /*
